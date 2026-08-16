@@ -1,3 +1,9 @@
+import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
+inject({ framework: "vite" });
+injectSpeedInsights({ framework: "vite" });
+
 document.documentElement.classList.add("js-enabled");
 
 const menuButton = document.querySelector("[data-menu-button]");
